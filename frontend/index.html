@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataWarehouse Orders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📦 DataWarehouse Orders</h1>
+
+    <div class="card">
+        <form id="orderForm">
+            <input type="number" id="amount" placeholder="Enter amount" required />
+            <button type="submit">Add Order</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Order Date</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="orders"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

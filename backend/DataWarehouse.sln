@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataWarehouse.API", "DataWarehouse.API\DataWarehouse.API.csproj", "{39634378-E31C-426C-8D2F-4168E2F820D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataWarehouse.API.Tests", "DataWarehouse.API.Tests\DataWarehouse.API.Tests.csproj", "{80DDAD71-57EE-4733-A1A3-C7BB6998821F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39634378-E31C-426C-8D2F-4168E2F820D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39634378-E31C-426C-8D2F-4168E2F820D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39634378-E31C-426C-8D2F-4168E2F820D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39634378-E31C-426C-8D2F-4168E2F820D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80DDAD71-57EE-4733-A1A3-C7BB6998821F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80DDAD71-57EE-4733-A1A3-C7BB6998821F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80DDAD71-57EE-4733-A1A3-C7BB6998821F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80DDAD71-57EE-4733-A1A3-C7BB6998821F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA6BA3BE-2E8A-4B87-8901-B87BD6594C99}
+	EndGlobalSection
+EndGlobal
