@@ -26,7 +26,7 @@ pipeline {
 
         stage('Build Backend Image') {
             steps {
-                sh 'docker build -t ${BACKEND_IMAGE} ./backend'
+                sh 'docker build -t <image> ./datawarehouse.api'
             }
         }
 
