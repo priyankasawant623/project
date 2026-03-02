@@ -17,6 +17,19 @@ pipeline {
 
     stages {
 
+        stage('FULL DEBUG') {
+    steps {
+        sh '''
+        echo "PWD:"
+        pwd
+        echo "ROOT FILES:"
+        ls -la
+        echo "RECURSIVE:"
+        ls -R
+        '''
+    }
+}
+
         stage('Clone Code') {
             steps {
                 git branch: 'main',
