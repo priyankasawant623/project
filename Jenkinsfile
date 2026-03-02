@@ -25,10 +25,10 @@ pipeline {
         }
 
         stage('Build Backend Image') {
-            steps {
-                sh 'docker build -t <image> ./datawarehouse.api'
-            }
-        }
+    steps {
+        sh 'docker build -t 410003306855.dkr.ecr.ap-south-1.amazonaws.com/priyanka623/dotnet-backend:2 ./datawarehouse.api'
+    }
+}
 
         stage('Build Frontend Image') {
             steps {
