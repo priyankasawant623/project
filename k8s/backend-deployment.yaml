@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dotnet-backend
+  template:
+    metadata:
+      labels:
+        app: dotnet-backend
+    spec:
+      containers:
+        - name: dotnet-backend
+          image: 410003306855.dkr.ecr.ap-south-1.amazonaws.com/priyanka623/dotnet-backend:2
+          ports:
+            - containerPort: 5000
+          env:
+            - name: ASPNETCORE_URLS
+              value: "http://0.0.0.0:5000"
