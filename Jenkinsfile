@@ -57,11 +57,8 @@ pipeline {
         stage('Build Backend Image') {
     steps {
         sh '''
-        pwd
-        ls backend
         cd backend/DataWarehouse.API
-        pwd
-        docker build -t 410003306855.dkr.ecr.ap-south-1.amazonaws.com/priyanka623/dotnet-backend:2 .
+        docker build -t ${BACKEND_IMAGE} .
         '''
     }
 }
