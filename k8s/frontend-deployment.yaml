@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: static-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: static-frontend
+  template:
+    metadata:
+      labels:
+        app: static-frontend
+    spec:
+      containers:
+        - name: static-frontend
+          image: 410003306855.dkr.ecr.ap-south-1.amazonaws.com/priyanka623/static-frontend:16
+          ports:
+            - containerPort: 80
