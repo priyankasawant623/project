@@ -30,6 +30,17 @@ pipeline {
     }
 }
 
+        stage('Workspace Check') {
+    steps {
+        sh '''
+        echo "Workspace:"
+        pwd
+        echo "Parent folders:"
+        ls -la /var/lib/jenkins/workspace
+        '''
+    }
+}
+
         stage('Clone Code') {
             steps {
                 git branch: 'main',
