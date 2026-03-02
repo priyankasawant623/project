@@ -48,12 +48,7 @@ pipeline {
             }
         }
 
-        stage('Checkout Code') {
-            steps {
-                checkout scm
-            }
-        }
-
+        
         stage('Build Backend Image') {
     steps {
         sh '''
@@ -88,22 +83,22 @@ pipeline {
         }
 
         stage('Deploy to EKS') {
-            steps {
-                sh '''
-                kubectl apply -f k8s/backend-deployment.yaml
-                kubectl apply -f k8s/backend-service.yaml
+    steps {
+        sh '''
+        kubectl apply -f k8s/backend-deployment.yaml
+        kubectl apply -f k8s/backend-service.yaml
 
-                kubectl apply -f k8s/frontend-deployment.yaml
-                kubectl apply -f k8s/frontend-service.yaml
+        kubectl apply -f k8s/frontend-deployment.yaml
+        kubectl apply -f k8s/frontend-service.yaml
 
-                kubectl set image deployment/backend backend=${BACKEND_IMAGE}
-                kubectl set image deployment/frontend frontend=${FRONTEND_IMAGE}
+        kubectl set image deployment/dotnet-backend dotnet-backend=${BACKEND_IMAGE}
+        kubectl set image deployment/static-frontend static-frontend=${FRONTEND_IMAGE}
 
-                kubectl rollout status deployment/backend
-                kubectl rollout status deployment/frontend
-                '''
-            }
-        }
+        kubectl rollout status deployment/dotnet-backend
+        kubectl rollout status deployment/static-frontend
+        '''
+    }
+}
 
         stage('Verify') {
             steps {
