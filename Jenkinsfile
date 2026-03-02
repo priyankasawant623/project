@@ -17,30 +17,7 @@ pipeline {
 
     stages {
 
-        stage('FULL DEBUG') {
-    steps {
-        sh '''
-        echo "PWD:"
-        pwd
-        echo "ROOT FILES:"
-        ls -la
-        echo "RECURSIVE:"
-        ls -R
-        '''
-    }
-}
-
-        stage('Workspace Check') {
-    steps {
-        sh '''
-        echo "Workspace:"
-        pwd
-        echo "Parent folders:"
-        ls -la /var/lib/jenkins/workspace
-        '''
-    }
-}
-
+        
         stage('Clone Code') {
             steps {
                 git branch: 'main',
@@ -81,6 +58,17 @@ pipeline {
                 '''
             }
         }
+
+        stage('Deploy MySQL to EKS') {
+    steps {
+        sh '''
+        kubectl apply -f k8s/mysql-deployment.yaml
+        kubectl apply -f k8s/mysql-service.yaml
+
+        kubectl rollout status deployment/mysql
+        '''
+    }
+}
 
         stage('Deploy to EKS') {
     steps {
