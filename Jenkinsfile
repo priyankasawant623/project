@@ -44,7 +44,7 @@ pipeline {
         stage('Clone Code') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/priyankasawant623/dotnet.git'
+                url: 'https://github.com/priyankasawant623/project.git'
             }
         }
 
