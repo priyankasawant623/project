@@ -48,6 +48,12 @@ pipeline {
             }
         }
 
+        stage('Checkout Code') {
+            steps {
+                checkout scm
+            }
+        }
+
         stage('Build Backend Image') {
     steps {
         sh '''
