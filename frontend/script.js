@@ -1,4 +1,4 @@
-const API = "http://44.211.197.194:5000/api/orders";
+const API = "http://13.200.228.191:5000/api/orders";
 
 function formatCurrency(amount) {
     return new Intl.NumberFormat("en-IN", {
