@@ -9,7 +9,7 @@ pipeline {
         BACKEND_REPO = "priyanka623/dotnet-backend"
         FRONTEND_REPO = "priyanka623/static-frontend"
 
-        IMAGE_TAG = "${BUILD_NUMBER}"
+        IMAGE_TAG = "latest"
 
         BACKEND_IMAGE = "${ECR_REGISTRY}/${BACKEND_REPO}:${IMAGE_TAG}"
         FRONTEND_IMAGE = "${ECR_REGISTRY}/${FRONTEND_REPO}:${IMAGE_TAG}"
