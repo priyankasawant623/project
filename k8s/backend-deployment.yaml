@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: dotnet-backend
-          image: 410003306855.dkr.ecr.ap-south-1.amazonaws.com/priyanka623/dotnet-backend:6
+          image: 410003306855.dkr.ecr.ap-south-1.amazonaws.com/priyanka623/dotnet-backend:latest
           ports:
             - containerPort: 5000
           env:
