@@ -1,4 +1,4 @@
-const API = "http://backend-service:5000/api/orders";
+const API = "http://afda467f70dfb4b68bbd34f9f72ff738-716844544.ap-south-1.elb.amazonaws.com:5000/api/orders";
 
 function formatCurrency(amount) {
     return new Intl.NumberFormat("en-IN", {
